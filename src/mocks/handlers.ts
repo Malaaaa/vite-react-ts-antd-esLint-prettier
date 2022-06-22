@@ -25,6 +25,15 @@ export const handlers = [
         )
     }),
     rest.post('/login', (req, res, ctx) => {
+        const { username, password } = req.body as { username: string, password: string }
+        if (username !== 'test' && password !== 'test') {
+            return res(
+                ctx.json({
+                    message: 'Invalid username or password.',
+                }),
+                ctx.status(401)
+            )
+        }
         return res(
             ctx.delay(400),
             ctx.json({

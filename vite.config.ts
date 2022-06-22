@@ -6,7 +6,7 @@ import vitePluginImp from 'vite-plugin-imp'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(),vitePluginImp({
+  plugins: [react(), vitePluginImp({
     libList: [
       {
         libName: "antd",
@@ -20,11 +20,11 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       less: {
-        // modifyVars: { 'primary-color': '#13c2c2' },
-        modifyVars: getThemeVariables({
-          // dark: true,
-          // compact: true,
-        }),
+        modifyVars: {
+          'primary-color': '#13c2c2',
+          'font-size-base': '14px',
+
+        },
         // Inline JavaScript
         javascriptEnabled: true,
       }

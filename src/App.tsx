@@ -27,7 +27,6 @@ const App: FC = () => {
         dispatch(setCredentials(user))
         navigate('/')
       } catch (err) {
-        debugger;
         dispatch(logOut())
         navigate('/login')
       }

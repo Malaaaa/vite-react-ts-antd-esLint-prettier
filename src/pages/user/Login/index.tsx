@@ -59,6 +59,7 @@ const Login = (props: Props) => {
                     </Form.Item>
                     <Form.Item>
                         <Input.Password
+                            name="password"
                             onChange={handleChange}
                             placeholder='password' />
                     </Form.Item>
